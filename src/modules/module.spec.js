@@ -1,5 +1,5 @@
 // server.js
-const greetingService = require('../../src/lab01-modules-classes/lab01b-module');
+const greetingService = require('./module');
 
 it('should print val',async()=> {
     let greeting = greetingService.greet(); 
