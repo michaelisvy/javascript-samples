@@ -1,5 +1,5 @@
 // server.js
-const greeting = require('../../src/lab01-modules-classes/lab01d-class-param');
+const greeting = require('./class-param');
 
 it('should access class and get greeting message',async()=> {
     greeting.setFirstName("John");

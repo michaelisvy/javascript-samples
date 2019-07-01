@@ -1,5 +1,5 @@
-const Person = require('../../src/lab01-modules-classes/lab01c-person');
-const Greeting = require('../../src/lab01-modules-classes/lab01c-greeting');
+const Person = require('./person');
+const Greeting = require('./greeting');
 
 it('should access class and display hello',async()=> {
 
