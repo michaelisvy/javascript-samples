@@ -1,4 +1,4 @@
-const syncService = require('../../src/lab02-async/lab02a-sync');
+const syncService = require('./sync');
 
 it('should make a synchronous call to greeting service',async()=> {
     
