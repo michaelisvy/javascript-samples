@@ -1,4 +1,4 @@
-const promiseService = require('../../src/lab02-async/lab02b-promise');
+const promiseService = require('./promise');
 
 it('should call promise01',async()=> {
     let promise = promiseService.promise01("Sam"); 
