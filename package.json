@@ -1,0 +1,17 @@
+{
+  "name": "javascript-samples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "jest": "^24.8.0",
+    "lint": "^0.7.0",
+    "winston": "^3.2.1"
+  }
+}
