@@ -12,6 +12,8 @@
   "dependencies": {
     "jest": "^24.8.0",
     "lint": "^0.7.0",
+    "moment": "^2.24.0",
+    "sinon": "^7.3.2",
     "winston": "^3.2.1"
   }
 }
