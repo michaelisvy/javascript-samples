@@ -7,7 +7,15 @@ let specialNumbers = {
 }
 
 test('should be able to retrieve a value from dictionnary/Object', () => {
+    
     expect(specialNumbers[3]).toBe("Foo");
+    
+});
+
+test('should check the type of the key elements', () => {
+    let keys = Object.keys(specialNumbers);
+    expect(typeof keys[0]).toBe("string");
+    expect(keys[0]).toBe("3");
     
 });
 
