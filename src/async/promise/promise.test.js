@@ -18,7 +18,10 @@ it('should call multiple promises',async()=> {
         promiseService.promise02("Averell"),
     ])
     .then(function (responses) {
-        console.log("responses "+responses);
+        expect(responses[0]).toBe("hello Joe");
+        expect(responses[1]).toBe("hello Jack");
+        expect(responses[2]).toBe("hello William");
+        expect(responses[3]).toBe("hello Averell");
     });
     await daltonPromise;
 
