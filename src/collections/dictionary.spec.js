@@ -1,7 +1,7 @@
 /* this type structure is typically called `Object` or `Dictionary`
 */
 
-const specialNumbers = {
+let specialNumbers = {
     3: "Foo",
     5: "Bar"    
 }
