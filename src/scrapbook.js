@@ -1,20 +1,6 @@
-const{format, createLogger, transports} = require('winston');
+let sinon = require("sinon");
 
+var spy = sinon.spy();
+spy("hello");
 
-const logger = createLogger({
-    level: 'debug',
-    format: format.combine(
-        format.colorize(),
-        format.timestamp({
-          format: 'YYYY-MM-DD HH:mm:ss'
-        }),
-        format.printf(info => `${info.timestamp} ${info.level}: ${info.message}`)
-      ),
-    transports: [new transports.Console()]
-  });
-
-function hello() {
-    return new Promise( () => logger.info('hello'));
-}
-
-let result = hello().then(logger.warn("end"));
+console.log(spy.firstCall.args);
