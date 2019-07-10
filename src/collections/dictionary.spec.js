@@ -21,11 +21,11 @@ test('should check the type of the key elements', () => {
 });
 
 test('should loop through all values in dictionnary/Object', () => {
-    for(number in specialNumbers) {      
-        if(number == 3) { // I cannot use `===` because keys are stored as string, not int
+    for(let number in specialNumbers) {      
+        if(number === '3') { // I cannot use `===` because keys are stored as string, not int
             expect(specialNumbers[number]).toBe("Foo");
         }
-        if(number == 5) {
+        if(number === '5') {
             expect(specialNumbers[number]).toBe("Bar");
         }
  

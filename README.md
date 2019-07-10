@@ -10,4 +10,9 @@ In a real project, there should be a clear separation between `src` and `test`.
 npm run test
 ```
 
+* Running `eslint` for code quality analysis
+```
+node_modules/.bin/eslint src/**
+```
+
 

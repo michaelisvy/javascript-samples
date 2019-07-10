@@ -15,7 +15,7 @@ it('should call multiple promises',async()=> {
         promiseService.promise02("Joe"),
         promiseService.promise02("Jack"),
         promiseService.promise02("William"),
-        promiseService.promise02("Averell"),
+        promiseService.promise02("Averell")
     ])
     .then(function (responses) {
         expect(responses[0]).toBe("hello Joe");
