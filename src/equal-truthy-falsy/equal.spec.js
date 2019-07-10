@@ -1,3 +1,8 @@
+/**
+ * this file purposely uses some operations that are not recommended by eslint. 
+ * We're therefore disabling the eslint check for it
+ */
+/* eslint-disable */
 describe('Experiments on equal / truthy falsy', () => {
     it('should show that Javascript allows to change the type of a variable', () => {
         let mutant = 1;
@@ -47,3 +52,4 @@ describe('Experiments on equal / truthy falsy', () => {
         } 
     });
 });
+/* eslint-enable */
