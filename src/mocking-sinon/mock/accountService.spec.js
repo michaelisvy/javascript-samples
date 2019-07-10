@@ -10,5 +10,5 @@ test('should return name as Jack', () => {
     let myAccountService = new AccountService();
     var mock = sinon.mock(myAccountService);
     mock.expects("findName");
-    //mock.verify();
+    // mock.verify();
 });

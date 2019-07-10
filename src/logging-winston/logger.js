@@ -23,4 +23,3 @@ logger.debug("hello debug");
 logger.info("hello info");
 logger.warn("watch out!");
 logger.error("you're in trouble!");
-

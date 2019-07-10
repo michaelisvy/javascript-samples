@@ -33,7 +33,6 @@ describe('Experiments on equal / truthy falsy', () => {
         // what happens when both expressions are NaN? (Not A Number)
         expect("2" === "2").toBe(true);
         expect("2" === "2.0").toBe(false);
-        
     });
 
     it('should showcase truthy/falsy', () => {
@@ -45,10 +44,6 @@ describe('Experiments on equal / truthy falsy', () => {
             // expected behaviour. Expression inside `if` is truthy by default.
         } else {
             fail("expression inside if condition should have been truthy");
-        }
-        
+        } 
     });
-
-    
-    
 });

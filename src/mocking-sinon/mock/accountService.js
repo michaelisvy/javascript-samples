@@ -8,5 +8,4 @@ module.exports = class AccountService {
     findName() {
         return this.accountRepository.findName();
     }
-
 }

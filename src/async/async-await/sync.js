@@ -1,6 +1,6 @@
 
 module.exports = {
-   callGreeting: function(name) {
+   callGreeting: function (name) {
       return greeting(name);
    }
 }

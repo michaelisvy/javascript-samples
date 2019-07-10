@@ -10,8 +10,7 @@ test('should get value from key', () => {
 test('should check that keys are of type `number`', () => {
     specialNumbers.forEach((value, key) => {
         expect(typeof key).toBe("number");
-    });
-    
+    }); 
 });
 
 test('should check the type of a dictionary', () => {

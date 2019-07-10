@@ -26,5 +26,4 @@ test('should spy a call to an existing method', () => {
     user.setName("Averell");
     expect(userSetNameSpy.callCount).toBe(2); 
     // still 2 because the spy has been removed before William
-    
 });

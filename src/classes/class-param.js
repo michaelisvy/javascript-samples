@@ -1,4 +1,3 @@
-
 module.exports = class Greeting {
    constructor(firstName) {
       this.firstName = firstName;
@@ -8,4 +7,3 @@ module.exports = class Greeting {
       return "hello " + this.firstName;
    }
 }
-

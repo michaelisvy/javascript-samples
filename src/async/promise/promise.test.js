@@ -11,7 +11,7 @@ it('should call promise02',async()=> {
     expect(result).toBe("hello Sam");
 });
 it('should call multiple promises',async()=> {
-    let daltonPromise =  Promise.all([
+    let daltonPromise = Promise.all([
         promiseService.promise02("Joe"),
         promiseService.promise02("Jack"),
         promiseService.promise02("William"),
@@ -24,9 +24,7 @@ it('should call multiple promises',async()=> {
         expect(responses[3]).toBe("hello Averell");
     });
     await daltonPromise;
-
 });
-
 
 it('should call async01 with async',async()=> {
     let promise = promiseService.async01("Sam");

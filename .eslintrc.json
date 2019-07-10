@@ -15,6 +15,15 @@
     "rules": {
         "indent": "off",
         "quotes": "off",
-        "eol-last": "off"
+        "eol-last": "off",
+        "space-before-function-paren": "off",
+        "comma-spacing": "off",
+        "arrow-spacing": "off",
+        "no-trailing-spaces": "off",
+        "semi": "off",
+        "space-infix-ops": "off",
+        "keyword-spacing": "off",
+        "space-in-parens": "off",
+        "object-curly-spacing": "off"
     }
 }
