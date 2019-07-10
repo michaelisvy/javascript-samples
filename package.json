@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "eslint":"node_modules/.bin/eslint src/**"
   },
   "author": "",
   "license": "ISC",

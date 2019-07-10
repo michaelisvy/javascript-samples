@@ -12,7 +12,7 @@ npm run test
 
 * Running `eslint` for code quality analysis
 ```
-node_modules/.bin/eslint src/**
+npm run eslint
 ```
 
 
