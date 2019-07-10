@@ -1,7 +1,7 @@
 var AccountRepository = require("./accountRepository");
 
 module.exports = class AccountService {
-    constructor() {
+    constructor() { 
         this.accountRepository = new AccountRepository();
     }
 
