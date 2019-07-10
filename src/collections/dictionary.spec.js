@@ -6,6 +6,7 @@ let specialNumbers = {
     5: "Bar"    
 }
 
+
 test('should be able to retrieve a value from dictionnary/Object', () => {
     
     expect(specialNumbers[3]).toBe("Foo");
@@ -31,5 +32,3 @@ test('should loop through all values in dictionnary/Object', () => {
     }
     
 });
-
-
