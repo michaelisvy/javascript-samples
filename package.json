@@ -8,12 +8,14 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {},
-  "dependencies": {
+  "devDependencies": {
+    "jasmine": "^3.4.0",
     "jest": "^24.8.0",
+    "sinon": "^7.3.2"
+  },
+  "dependencies": {
     "lint": "^0.7.0",
     "moment": "^2.24.0",
-    "sinon": "^7.3.2",
     "winston": "^3.2.1"
   }
 }
