@@ -26,6 +26,7 @@
         "space-infix-ops": "off",
         "keyword-spacing": "off",
         "space-in-parens": "off",
-        "object-curly-spacing": "off"
+        "object-curly-spacing": "off",
+        "func-call-spacing": "off"
     }
 }
