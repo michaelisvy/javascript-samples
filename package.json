@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "t": "jest",
+    "tc": "jest --coverage --coverageDirectory target",
     "eslint":"node_modules/.bin/eslint src/**"
   },
   "author": "",

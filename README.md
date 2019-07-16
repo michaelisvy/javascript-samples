@@ -7,8 +7,14 @@ In a real project, there should be a clear separation between `src` and `test`.
 
 * Run all the tests
 ```
-npm run test
+npm run t
 ```
+* Run all the tests with coverage report inside the `target` folder
+```
+npm run tc
+```
+
+
 
 * Running `eslint` for code quality analysis
 ```
