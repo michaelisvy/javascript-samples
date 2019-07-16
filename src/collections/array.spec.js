@@ -1,6 +1,5 @@
-const sampleData = ['a','b','c','d','e'];
-
-describe('Experiments on Array functions', () => {
+describe('Experiments on Array loops', () => {
+    const sampleData = ['a','b','c','d','e'];
     test('should extract part of an array and expect value for one cell', () => {
         let extractedData = sampleData.slice(1,3); // second element to 4th element
         expect(extractedData[0]).toBe('b');
@@ -48,4 +47,15 @@ describe('Experiments on Array functions', () => {
         )
         expect(sumNumbers).toBe(10);
     });
+});
+
+describe('Experiments on other Array functions', () => {
+    test('should use push function', () => {
+        let array = [0];
+        array.push(1);
+        array.push(2);
+        expect(array).toEqual([0,1,2]);
+        
+    });
+    
 });
