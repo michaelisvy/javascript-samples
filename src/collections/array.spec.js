@@ -61,7 +61,16 @@ describe('Experiments on other Array functions', () => {
         let numbers1 = [1,2];
         let numbers2 = [...numbers1, 3, 4]; // merges 2 arrays together
         expect(numbers2).toEqual([1,2,3,4]);
-        
     });
-    
+
+    test('should use spread operator for a function to have a variable number of parameters', () => {
+        expect(sum(1,2)).toBe(3);
+        expect(sum(1,2,3,4)).toBe(10);
+    });
+
+    function sum(...numbers) {
+        return numbers.reduce((accumulator, current) => 
+             accumulator + current
+        );
+    };
 });
