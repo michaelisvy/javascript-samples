@@ -55,6 +55,12 @@ describe('Experiments on other Array functions', () => {
         array.push(1);
         array.push(2);
         expect(array).toEqual([0,1,2]);
+    });
+
+    test('should use spread operator', () => {
+        let numbers1 = [1,2];
+        let numbers2 = [...numbers1, 3, 4]; // merges 2 arrays together
+        expect(numbers2).toEqual([1,2,3,4]);
         
     });
     
