@@ -1,7 +1,12 @@
 .DS_Store
 node_modules
 /dist
+
+# `target` folder is used for test coverage reports
 /target
+
+# scrapbook files should not be persisted
+scrapbook*
 
 # local env files
 .env.local
