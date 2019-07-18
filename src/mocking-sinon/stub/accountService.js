@@ -6,6 +6,6 @@ module.exports = class AccountService {
     }
 
     findName() {
-        return this.accountRepository.findName();
+        return "hello " + this.accountRepository.findName();
     }
 }

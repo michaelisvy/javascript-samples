@@ -2,17 +2,17 @@ let AccountService = require("./accountService");
 let AccountRepository = require('./accountRepository');
 let sinon = require("sinon");
 
-test('should return name as John', () => {
+test('should return name as Sam', () => {
     let myAccountService = new AccountService();
     let myAccountRepository = new AccountRepository();
-    const accountRepoStub = sinon.stub(myAccountRepository, 'findName'). returns('Sam');
-    expect(myAccountRepository.findName()).toBe('Sam');
+    sinon.stub(myAccountRepository, 'findName'). returns('Sam');
+    myAccountService.accountRepository = myAccountRepository;
+    expect(myAccountService.findName()).toBe('hello Sam');
 
 });
 
-test.skip('should return name as Jack', () => {
+test('should return name as John', () => {
     let myAccountService = new AccountService();
-    var mock = sinon.mock(myAccountService);
-    mock.expects("findName");
-    // mock.verify();
+    expect(myAccountService.findName()).toBe('hello John');
+
 });
