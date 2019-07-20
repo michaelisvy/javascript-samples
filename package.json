@@ -6,7 +6,7 @@
   "scripts": {
     "t": "jest",
     "tc": "jest --coverage --coverageDirectory target",
-    "eslint":"node_modules/.bin/eslint src/**"
+    "eslint": "node_modules/.bin/eslint src/**"
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +24,7 @@
   "dependencies": {
     "lint": "^0.7.0",
     "moment": "^2.24.0",
+    "sinon-test": "^2.4.0",
     "winston": "^3.2.1"
   }
 }
