@@ -1,3 +1,3 @@
-function getSecretNumber() {return 44;}
+function getSecretNumber() { return 44; }
 
-module.exports = {getSecretNumber};
+module.exports = { getSecretNumber };
