@@ -14,7 +14,8 @@ test('should spy a call to an existing method', () => {
             this.name = name;
         }
     };
-    let userSetNameSpy = sinon.spy(user, 'setName'); // one spy per function 
+    let userSetNameSpy = sinon.spy(user, 'setName'); 
+    // one spy per function, even if there are multiple functions in the same file
 
     user.setName("Joe");
     user.setName("Jack");
@@ -22,6 +23,7 @@ test('should spy a call to an existing method', () => {
 
     userSetNameSpy.restore(); // removes the spy
 
+    // starting from now, the spy is not recording anymore
     user.setName("William");
     user.setName("Averell");
     expect(userSetNameSpy.callCount).toBe(2); 
