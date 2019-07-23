@@ -1,21 +1,19 @@
-const promiseService = require('./promise');
-
 it('should call promise01',async()=> {
-    let promise = promiseService.promise01("Sam"); 
+    let promise = sayHello("Sam"); 
     let greeting = await promise;
     expect(greeting).toBe("hello Sam");
 });
 
 it('should call promise02',async()=> {
-    let result = await promiseService.promise02("Sam");
+    let result = await sayHello("Sam");
     expect(result).toBe("hello Sam");
 });
 it('should call multiple promises',async()=> {
     let daltonPromise = Promise.all([
-        promiseService.promise02("Joe"),
-        promiseService.promise02("Jack"),
-        promiseService.promise02("William"),
-        promiseService.promise02("Averell")
+        sayHello("Joe"),
+        sayHello("Jack"),
+        sayHello("William"),
+        sayHello("Averell")
     ])
     .then(function (responses) {
         expect(responses[0]).toBe("hello Joe");
@@ -26,8 +24,8 @@ it('should call multiple promises',async()=> {
     await daltonPromise;
 });
 
-it('should call async01 with async',async()=> {
-    let promise = promiseService.async01("Sam");
-    let greeting = await promise;
-    expect(greeting).toBe("hello Sam");
-});
+function sayHello(name) {
+    return new Promise(function(resolve, reject) {
+       resolve("hello " +name);
+    });
+}
