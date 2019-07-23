@@ -1,6 +1,6 @@
 let sinon = require("sinon");
 
-test('should make a call using an anonymous spy', () => {
+it('should make a call using an anonymous spy', () => {
     let spy = sinon.spy();
     spy("hello");
     spy("blablabla");
@@ -8,7 +8,7 @@ test('should make a call using an anonymous spy', () => {
     expect(spy.secondCall.args[0]).toBe("blablabla");
 });
 
-test('should spy a call to an existing method', () => {
+it('should spy a call to an existing method', () => {
     let user = {
         setName: function(name) {
             this.name = name;

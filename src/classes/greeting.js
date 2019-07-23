@@ -1,7 +1,7 @@
-
+let Person = require("./person");
 module.exports = class Greeting {
-   constructor(person) {
-      this.person = person;
+   constructor(name) {
+      this.person = new Person(name);
    }
 
   greet() {
