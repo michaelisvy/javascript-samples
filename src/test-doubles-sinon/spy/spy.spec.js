@@ -1,7 +1,7 @@
-let sinon = require("sinon");
+const sinon = require("sinon");
 
 it('should make a call using an anonymous spy', () => {
-    let spy = sinon.spy();
+    const spy = sinon.spy();
     spy("hello");
     spy("blablabla");
     expect(spy.firstCall.args[0]).toBe("hello");
@@ -9,12 +9,12 @@ it('should make a call using an anonymous spy', () => {
 });
 
 it('should spy a call to an existing method', () => {
-    let user = {
+    const user = {
         setName: function(name) {
             this.name = name;
         }
     };
-    let userSetNameSpy = sinon.spy(user, 'setName'); 
+    const userSetNameSpy = sinon.spy(user, 'setName'); 
     // one spy per function, even if there are multiple functions in the same file
 
     user.setName("Joe");

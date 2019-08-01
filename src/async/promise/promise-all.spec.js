@@ -1,15 +1,15 @@
 it('should call promise01',async()=> {
-    let promise = sayHello("Sam"); 
-    let greeting = await promise;
+    const promise = sayHello("Sam"); 
+    const greeting = await promise;
     expect(greeting).toBe("hello Sam");
 });
 
 it('should call promise02',async()=> {
-    let result = await sayHello("Sam");
+    const result = await sayHello("Sam");
     expect(result).toBe("hello Sam");
 });
 it('should call multiple promises',async()=> {
-    let daltonPromise = Promise.all([
+    const daltonPromise = Promise.all([
         sayHello("Joe"),
         sayHello("Jack"),
         sayHello("William"),

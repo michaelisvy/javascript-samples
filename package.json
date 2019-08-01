@@ -6,7 +6,8 @@
   "scripts": {
     "t": "jest",
     "tc": "jest --coverage --coverageDirectory target",
-    "eslint": "node_modules/.bin/eslint src/**"
+    "eslint": "node_modules/.bin/eslint src/**",
+    "jsdoc": "./node_modules/.bin/jsdoc greeting.js"
   },
   "author": "",
   "license": "ISC",
@@ -25,6 +26,7 @@
     "lint": "^0.7.0",
     "moment": "^2.24.0",
     "sinon-test": "^2.4.0",
+    "sqlite3": "^4.0.9",
     "winston": "^3.2.1"
   }
 }

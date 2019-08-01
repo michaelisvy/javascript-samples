@@ -1,10 +1,10 @@
-let PersonService = require("./personService");
-let PersonRepository = require('./personRepository');
-let sinon = require("sinon");
-let myPersonService = new PersonService();
+const PersonService = require("./personService");
+const PersonRepository = require('./personRepository');
+const sinon = require("sinon");
+const myPersonService = new PersonService();
 
 test('should return name as Sam', () => {
-    let myPersonRepository = new PersonRepository();
+    const myPersonRepository = new PersonRepository();
     const repositoryState = sinon.stub(myPersonRepository, 'findName').returns('Sam');
     myPersonService.personRepository = myPersonRepository;
     expect(myPersonService.findName()).toBe('hello Sam');

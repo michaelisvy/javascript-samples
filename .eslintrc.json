@@ -15,6 +15,7 @@
         "sourceType": "module"
     },
     "rules": {
+        "prefer-const": "error",
         "indent": "off",
         "quotes": "off",
         "eol-last": "off",

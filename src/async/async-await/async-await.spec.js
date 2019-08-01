@@ -1,6 +1,6 @@
 it('should call async01 with async',async()=> {
-    let promise = sayHello("Sam");
-    let greeting = await promise;
+    const promise = sayHello("Sam");
+    const greeting = await promise;
     expect(greeting).toBe("hello Sam");
 });
 

@@ -1,4 +1,4 @@
-let specialNumbers = new Map([
+const specialNumbers = new Map([
     [3, "Foo"],
     [5, "Bar"]
 ]);

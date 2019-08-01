@@ -1,4 +1,4 @@
-let Person = require("./person");
+const Person = require("./person");
 module.exports = class Greeting {
    constructor(name) {
       this.person = new Person(name);

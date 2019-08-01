@@ -1,13 +1,13 @@
 describe('Experiments on Array loops', () => {
     const sampleData = ['a','b','c','d','e'];
     test('should extract part of an array and expect value for one cell', () => {
-        let extractedData = sampleData.slice(1,3); // second element to 4th element
+        const extractedData = sampleData.slice(1,3); // second element to 4th element
         expect(extractedData[0]).toBe('b');
         expect(extractedData).toEqual(['b', 'c']); // need to use toEqual so compares by value
     });
 
     test('should show that negative numbers start from the end of the index', () => {
-        let extractedData = sampleData.slice(-3,-1);
+        const extractedData = sampleData.slice(-3,-1);
         expect(extractedData).toEqual(['c', 'd']);
     });
 
@@ -33,14 +33,14 @@ describe('Experiments on Array loops', () => {
 
     test('should reduce function inline', () => {
         const numbers = [1,2,3,4];
-        let sumNumbers = numbers.reduce( (accumulator, currentValue) => accumulator + currentValue
+        const sumNumbers = numbers.reduce( (accumulator, currentValue) => accumulator + currentValue
         );
         expect(sumNumbers).toBe(10);
     });
 
     test('should reduce function with method block', () => {
         const numbers = [1,2,3,4];
-        let sumNumbers = numbers.reduce (
+        const sumNumbers = numbers.reduce (
             function(accumulator, currentValue) {
                 return accumulator + currentValue;
             }
@@ -51,15 +51,15 @@ describe('Experiments on Array loops', () => {
 
 describe('Experiments on other Array functions', () => {
     test('should use push function', () => {
-        let array = [0];
+        const array = [0];
         array.push(1);
         array.push(2);
         expect(array).toEqual([0,1,2]);
     });
 
     test('should use spread operator', () => {
-        let numbers1 = [1,2];
-        let numbers2 = [...numbers1, 3, 4]; // merges 2 arrays together
+        const numbers1 = [1,2];
+        const numbers2 = [...numbers1, 3, 4]; // merges 2 arrays together
         expect(numbers2).toEqual([1,2,3,4]);
     });
 
