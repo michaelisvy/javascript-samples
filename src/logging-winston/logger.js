@@ -6,7 +6,6 @@
 const {createLogger, format, transports} = require("winston");
 const path = require("path");
 
-
 const logger = createLogger({
   level: 'debug',
   format: format.combine(
@@ -21,8 +20,6 @@ const logger = createLogger({
   // Alternatively, logging to a file:
   // new transports.File({ filename })
 });
-
-
 
 logger.debug("hello debug");
 logger.info("hello info");

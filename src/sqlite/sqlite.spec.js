@@ -4,7 +4,6 @@ const db = new sqlite3.Database(':memory:');
 it('should behave...', async (done) => {
     const result = await fullMonthy();
     done();
-    console.log(result);
 });
 
  function fullMonthy() {    
@@ -22,6 +21,5 @@ it('should behave...', async (done) => {
         });
     });
     db.close();
-    console.log(result);
     return result;
 }
