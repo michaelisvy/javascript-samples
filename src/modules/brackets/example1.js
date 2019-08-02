@@ -1,3 +1,5 @@
-function greet() {return "hello"};
+function greet() { 
+    return "hello example1"
+}
 
 module.exports = greet;
