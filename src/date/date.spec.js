@@ -10,5 +10,6 @@ test('should check that one date is after another', () => {
 test('should compare year/month/day', () => {
     expect(date1.year()).toEqual(2010);
     expect(date1.month()).toEqual(0); // Month starts at 0, not 1
+    expect(date1.format('MM')).toEqual('01'); // however, using format method, I get '01'
     expect(date1.date()).toEqual(20);
 });
