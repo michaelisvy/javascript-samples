@@ -1,7 +1,7 @@
 // server.js
-const greetingService = require('./module');
+const {greet} = require('./module');
 
 it('should print val',async()=> {
-    const greeting = greetingService.greet(); 
+    const greeting = greet(); 
     expect(greeting).toBe("Hello");
 });
