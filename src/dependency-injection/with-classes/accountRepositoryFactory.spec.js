@@ -1,6 +1,5 @@
 const factory = require("./accountRepositoryFactory");
 
-// next step: should implement singleton pattern
 describe('Dependency Injection', () => {
     test('should use accountRepo1 dependency', () => {
         const accountRepo = factory.getAccountRepository();

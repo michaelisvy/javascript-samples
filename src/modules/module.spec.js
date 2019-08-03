@@ -1,7 +1,11 @@
-// server.js
-const {greet} = require('./module');
+it('should print val',async()=> {
+    const {greet1} = require('./module');
+    const greeting = greet1(); 
+    expect(greeting).toBe("Hello1");
+});
 
 it('should print val',async()=> {
-    const greeting = greet(); 
-    expect(greeting).toBe("Hello");
+    const module = require('./module');
+    const greeting = module.greet1(); 
+    expect(greeting).toBe("Hello1");
 });
