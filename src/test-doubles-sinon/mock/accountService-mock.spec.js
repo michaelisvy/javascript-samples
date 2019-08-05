@@ -1,5 +1,4 @@
 const AccountService = require("./accountService");
-const AccountRepository = require("./accountRepository");
 const sinon = require("sinon");
 
 test('should return name as John', () => {
@@ -13,5 +12,4 @@ test('should return name as Jack', () => {
     repoMock.expects("findName").once().returns("Jack");
     expect(service.findName()).toEqual("Jack");
     repoMock.restore();
-
 });
