@@ -5,10 +5,10 @@ const myPersonService = new PersonService();
 
 test('should return name as Sam', () => {
     const myPersonRepository = new PersonRepository();
-    const repositoryState = sinon.stub(myPersonRepository, 'findName').returns('Sam');
+    const stubState = sinon.stub(myPersonRepository, 'findName').returns('Sam');
     myPersonService.personRepository = myPersonRepository;
     expect(myPersonService.findName()).toBe('hello Sam');
-    repositoryState.restore();
+    stubState.restore();
 });
 
 test('should return name as John', () => {
