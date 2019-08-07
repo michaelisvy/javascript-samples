@@ -1,3 +1,5 @@
+const CustomError = require("./CustomError")
+
 function troubleMaker() {
     throw new Error("this is an error");
 }
@@ -6,4 +8,8 @@ function troubleFriend() {
     return troubleMaker();
 }
 
-module.exports = {troubleMaker, troubleFriend};
+function customTroubleMaker() {
+    throw new CustomError();
+}
+
+module.exports = {troubleMaker, troubleFriend, customTroubleMaker};
