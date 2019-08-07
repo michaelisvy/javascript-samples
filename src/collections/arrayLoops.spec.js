@@ -48,29 +48,3 @@ describe('Experiments on Array loops', () => {
         expect(sumNumbers).toBe(10);
     });
 });
-
-describe('Experiments on other Array functions', () => {
-    test('should use push function', () => {
-        const array = [0];
-        array.push(1);
-        array.push(2);
-        expect(array).toEqual([0,1,2]);
-    });
-
-    test('should use spread operator', () => {
-        const numbers1 = [1,2];
-        const numbers2 = [...numbers1, 3, 4]; // merges 2 arrays together
-        expect(numbers2).toEqual([1,2,3,4]);
-    });
-
-    test('should use spread operator for a function to have a variable number of parameters', () => {
-        expect(sum(1,2)).toBe(3);
-        expect(sum(1,2,3,4)).toBe(10);
-    });
-
-    function sum(...numbers) {
-        return numbers.reduce((accumulator, current) => 
-             accumulator + current
-        );
-    };
-});
