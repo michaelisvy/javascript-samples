@@ -26,7 +26,18 @@ describe('Tests on Exceptions', () => {
         try {
             customTroubleMaker();
         }
-        catch(error) {} 
+        catch(error) {
         // unfortunately, we cannot catch a CustomError specifically because error has no type
+        // so we need to call a function manually
+        expect(isOfTypeCustomError(error)).toBe(true);
+        } 
     });
+
+    function isOfTypeCustomError(error) {
+        if (error instanceof CustomError) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 });
