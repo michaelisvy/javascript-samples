@@ -26,7 +26,7 @@ describe('Using Sinon with Stubs', () => {
 
     it('should call a Stub that throws an error', () => {
         stub = sinon.stub(secretNmber, "getSecretNumber").throws(new Error("my secret error"));
-        let callFunction = function() {secretSentence.getSecretSentence()}; 
+        const callFunction = function() { secretSentence.getSecretSentence() }; 
         // needs to be wrapped in a function as we're using expect().toThrow()
         expect(callFunction).toThrow(new Error ("my secret error"));
         sinon.assert.calledOnce(stub);

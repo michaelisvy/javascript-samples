@@ -26,7 +26,7 @@ test('should check how service behaves when Repository throws an Error', () => {
     const stub = sinon.stub(myPersonRepository, 'findName').
                                 throws(new Error("database connection issue"));
     myPersonService.personRepository = myPersonRepository;
-    const callFunction = function() {myPersonService.findName()};
+    const callFunction = function() { myPersonService.findName() };
     expect(callFunction).toThrow(new Error("database connection issue"));
     sinon.assert.calledOnce(stub);
     stub.restore();

@@ -28,6 +28,7 @@
         "keyword-spacing": "off",
         "space-in-parens": "off",
         "object-curly-spacing": "off",
-        "func-call-spacing": "off"
+        "func-call-spacing": "off",
+        "dot-location": "off"
     }
 }
