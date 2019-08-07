@@ -21,4 +21,12 @@ describe('Tests on Exceptions', () => {
         const troubleMakerCall = function() {customTroubleMaker()};
         expect(troubleMakerCall).toThrow(new CustomError());
     });
+
+    test('should catch an error', () => {
+        try {
+            customTroubleMaker();
+        }
+        catch(error) {} 
+        // unfortunately, we cannot catch a CustomError specifically because error has no type
+    });
 });
