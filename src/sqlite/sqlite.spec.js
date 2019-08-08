@@ -1,25 +1,34 @@
 const sqlite3 = require('sqlite3').verbose();
-const db = new sqlite3.Database(':memory:');
 
-it('should behave...', async (done) => {
-    const result = await fullMonthy();
-    done();
+it('should launch select query in database', () => {
+    const selectCallback = function(error, row) {
+        expect(row.artist).toEqual("Hendrix");
+        if(error) {
+            console.log("error");
+        }
+    }
+    fullMonty(selectCallback);
 });
 
- function fullMonthy() {    
+function fullMonty(selectCallback) {    
+    const db = new sqlite3.Database(':memory:');
     const result = [];
     db.serialize(function() {
-        db.run("CREATE TABLE Song (artist TEXT, title TEXT)");
-
-        var stmt = db.prepare("INSERT INTO Song VALUES (?,?)");
-        stmt.run("Handrix", "Little Wing");
-        stmt.run("Hendrix", "Hey Joe");
-        stmt.finalize();
-
-        db.each("SELECT artist, title FROM Song", function(err, row) {
-            result.push(row.artist + ": " + row.title);
-        });
+        initDB(db);
+        selectDB(db, selectCallback);
     });
     db.close();
-    return result;
+    return result; // empty
+}
+
+function initDB(db) {
+    db.run("CREATE TABLE Song (artist TEXT, title TEXT)");
+    const statement = db.prepare("INSERT INTO Song VALUES (?,?)");
+    statement.run("Hendrix", "Little Wing");
+    statement.run("Hendrix", "Hey Joe");
+    statement.finalize();
+}
+
+function selectDB(db, selectCallback) {
+    db.each("SELECT artist, title FROM Song", selectCallback);
 }

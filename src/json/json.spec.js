@@ -1,5 +1,3 @@
-
-
 describe('Tests on Json objects', () => {
     test('should write into a JSON object', () => {         
         const song = { title: "Little Wing",
