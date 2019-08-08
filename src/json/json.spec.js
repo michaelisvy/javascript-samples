@@ -8,4 +8,9 @@ describe('Tests on Json objects', () => {
         song.price = 0.8 * song.price; // 20% discount
         expect(song.price).toBe(4);
     });
+
+    test('should read from a configuration file', () => {
+        const config = require("./config");
+        expect(config.todayIsAGoodDay).toBe(true);
+    });
 });
