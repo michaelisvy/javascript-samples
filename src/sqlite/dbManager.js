@@ -13,12 +13,23 @@ function runBatchQuery(query, paramsArray) {
     });
 }
 
-function runSelect(query, callback) {
-    db.serialize(function () {
-        db.each(query, callback);
-    });
+function runSelect(query) {
+    return db.getAllAsync(query);
 }
 
+// we are defining a new function inside db
+db.getAllAsync = function (sql) { 
+    var that = this;
+    return new Promise(function (resolve, reject) {
+        that.all(sql, function (err, row) {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(row);
+            }
+        });
+    });
+};
 
 function close() {
     db.close();

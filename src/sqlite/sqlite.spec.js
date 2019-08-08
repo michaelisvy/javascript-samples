@@ -1,4 +1,4 @@
-const {runBatchQuery, close, runSelect} = require("./dbManager")
+const {runBatchQuery, runSelect, close} = require("./dbManager");
 
 beforeAll(() => {
     runBatchQuery("CREATE TABLE Song (artist TEXT, title TEXT)");
@@ -10,12 +10,9 @@ afterAll(() => {
     close();
 });
 
-it('should launch select query in database', () => {
-    const selectCallback = function(error, row) {
-        expect(row.artist).toEqual("Hendrix"); 
-        if(error) {
-            console.log("error");
-        }
-    }
-    runSelect("SELECT artist, title FROM Song", selectCallback);
+it('should launch select query in database', async() => {  
+    const result = await runSelect("select artist, title from Song");
+    expect(result[0].artist).toBe("Hendrix");
+    expect(result[0].title).toBe("Little Wing");
+    expect(result[1].title).toBe("Hey Joe");
 });
