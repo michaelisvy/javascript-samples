@@ -1,8 +1,8 @@
-const sqlite3 = require('sqlite3').verbose();
+const {getDB,  runBatchQuery, close, runSelect} = require("./dbManager")
 
 it('should launch select query in database', () => {
     const selectCallback = function(error, row) {
-        expect(row.artist).toEqual("Hendrix");
+        expect(row.artist).toEqual("Hendrix"); 
         if(error) {
             console.log("error");
         }
@@ -11,24 +11,22 @@ it('should launch select query in database', () => {
 });
 
 function fullMonty(selectCallback) {    
-    const db = new sqlite3.Database(':memory:');
+    const db = getDB();
     const result = [];
     db.serialize(function() {
         initDB(db);
         selectDB(db, selectCallback);
     });
-    db.close();
+    close();
     return result; // empty
 }
 
 function initDB(db) {
-    db.run("CREATE TABLE Song (artist TEXT, title TEXT)");
-    const statement = db.prepare("INSERT INTO Song VALUES (?,?)");
-    statement.run("Hendrix", "Little Wing");
-    statement.run("Hendrix", "Hey Joe");
-    statement.finalize();
+    runBatchQuery("CREATE TABLE Song (artist TEXT, title TEXT)");
+    runBatchQuery("INSERT INTO Song VALUES (?,?)",["Hendrix", "Little Wing"]);
+    runBatchQuery("INSERT INTO Song VALUES (?,?)",["Hendrix", "Hey Joe"]);
 }
 
 function selectDB(db, selectCallback) {
-    db.each("SELECT artist, title FROM Song", selectCallback);
+    runSelect("SELECT artist, title FROM Song", selectCallback);
 }
