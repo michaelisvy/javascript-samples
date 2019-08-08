@@ -6,13 +6,17 @@ function getDB() {
 }
 
 function runBatchQuery(query, paramsArray) {
-    const statement = db.prepare(query);
-    statement.run(paramsArray);
-    statement.finalize();
+    db.serialize(function () {
+        const statement = db.prepare(query);
+        statement.run(paramsArray);
+        statement.finalize();
+    });
 }
 
 function runSelect(query, callback) {
-    db.each(query, callback);
+    db.serialize(function () {
+        db.each(query, callback);
+    });
 }
 
 
@@ -20,4 +24,4 @@ function close() {
     db.close();
 }
 
-module.exports = {getDB, runBatchQuery, close, runSelect};
+module.exports = { getDB, runBatchQuery, close, runSelect };

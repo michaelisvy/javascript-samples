@@ -11,22 +11,17 @@ it('should launch select query in database', () => {
 });
 
 function fullMonty(selectCallback) {    
-    const db = getDB();
-    const result = [];
-    db.serialize(function() {
-        initDB(db);
-        selectDB(db, selectCallback);
-    });
+    initDB();
+    selectDB(selectCallback);
     close();
-    return result; // empty
 }
 
-function initDB(db) {
+function initDB() {
     runBatchQuery("CREATE TABLE Song (artist TEXT, title TEXT)");
     runBatchQuery("INSERT INTO Song VALUES (?,?)",["Hendrix", "Little Wing"]);
     runBatchQuery("INSERT INTO Song VALUES (?,?)",["Hendrix", "Hey Joe"]);
 }
 
-function selectDB(db, selectCallback) {
+function selectDB(selectCallback) {
     runSelect("SELECT artist, title FROM Song", selectCallback);
 }
