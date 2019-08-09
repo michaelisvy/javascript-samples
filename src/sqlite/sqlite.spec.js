@@ -2,8 +2,8 @@ const {runBatchQuery, runSelect, close} = require("./dbManager");
 
 beforeAll(() => {
     runBatchQuery("CREATE TABLE Song (artist TEXT, title TEXT)");
-    runBatchQuery("INSERT INTO Song VALUES (?,?)",["Hendrix", "Little Wing"]);
-    runBatchQuery("INSERT INTO Song VALUES (?,?)",["Hendrix", "Hey Joe"]);
+    runBatchQuery("INSERT INTO Song VALUES (?,?)", "Hendrix", "Little Wing");
+    runBatchQuery("INSERT INTO Song VALUES (?,?)", "Hendrix", "Hey Joe");
 });
 
 afterAll(() => {

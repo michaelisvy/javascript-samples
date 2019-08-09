@@ -7,9 +7,8 @@ function sayMultipleHellos(names = ["Bob"]) {
 }
 
 function saySpreadHellos(...names) { // default parameters do not work when using the Spread operator
-    console.log(names);
     if (names.length === 0) {
-        return "hello Bob";
+        names = [];
     }
     return `hello ${names}`;
 }
@@ -26,5 +25,5 @@ test('should test default parameters for an array', () => {
 
 test('should test default parameters for an array using spread operator', () => {
     expect(saySpreadHellos("Sam", "John")).toEqual("hello Sam,John");
-    expect(saySpreadHellos()).toEqual("hello Bob");
+    expect(saySpreadHellos()).toEqual("hello ");
 });

@@ -15,10 +15,13 @@ db.getAllAsync = function (sqlQuery) {
     });
 };
 
-function runBatchQuery(query, paramsArray) {
+function runBatchQuery(query, ...params) {
+    if (params.length === 0) {
+        params = [];
+    }
     db.serialize(function () {
         const statement = db.prepare(query);
-        statement.run(paramsArray);
+        statement.run(params);
         statement.finalize();
     });
 }
