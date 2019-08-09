@@ -27,8 +27,6 @@ function runSelect(query) {
     return db.getAllAsync(query);
 }
 
-
-
 function close() {
     db.close();
 }
