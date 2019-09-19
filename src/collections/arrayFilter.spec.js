@@ -6,7 +6,27 @@ const cities = [
     {name: 'Philadelphia', population: 1526006}
 ];
 
-  test('should fliter', () => {
+const flights = [
+    {
+      from: 'Singapore',
+      to: 'Jakarta',
+    },
+    {
+      from: 'Singapore',
+      to: 'Paris'
+    },
+    {
+        from: 'Jakarta',
+        to: 'Paris'
+    }
+  ]
+
+  test('should fliter flights', () => {
+    let filteredFlights = flights.filter(flight => flight.from === 'Singapore');
+    console.log(filteredFlights);
+});
+
+  test('should fliter cities', () => {
       let filteredCities = cities.filter(city => city.name === 'Los Angeles' || city.name === 'Philadelphia');
       expect(filteredCities).toEqual(
             [ { name: 'Los Angeles', population: 3792621 },
