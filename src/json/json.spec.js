@@ -1,6 +1,7 @@
 describe('Tests on Json objects', () => {
     test('should write into a JSON object', () => {         
-        const song = { title: "Little Wing",
+        const song = { 
+            title: "Little Wing",
             artist: "Jimi Hendrix",
             year: 1967,
             price: 5
@@ -10,7 +11,8 @@ describe('Tests on Json objects', () => {
     });
 
     test('should add an attribute to a JSON object', () => {  
-        const song = { title: "Little Wing",
+        const song = { 
+            title: "Little Wing",
             artist: "Jimi Hendrix",
             year: 1967,
             price: 5

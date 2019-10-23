@@ -1,10 +1,9 @@
 const clonedeep = require('lodash.clonedeep')
 
 describe('Experiments on Array clones', () => {
-
     test('should copy an object', () => {
-        let s1 = new Song("Little Wing");
-        let s2 = Object.assign({}, s1);
+        const s1 = new Song("Little Wing");
+        const s2 = Object.assign({}, s1);
         s2.title = "Hey Joe";
 
         expect(s1.title).toEqual("Little Wing");
@@ -20,8 +19,8 @@ describe('Experiments on Array clones', () => {
     });
 
     test('should make a deep clone', () => {
-        let originalSongs = [new Song("Little Wing"), new Song("Hey Joe")];
-        let copySongs = clonedeep(originalSongs);
+        const originalSongs = [new Song("Little Wing"), new Song("Hey Joe")];
+        const copySongs = clonedeep(originalSongs);
         copySongs[0].title = "All Along of the Watchtower";
         console.log(copySongs);
 
@@ -35,4 +34,3 @@ class Song {
         this.title = title;
     }
 }
-    

@@ -4,8 +4,7 @@
 function recursiveFactorial(number) {
     if (number === 1) {
         return number;
-    }
-    else return number * recursiveFactorial (number-1);
+    } else return number * recursiveFactorial (number-1);
 }
 
 /**
@@ -15,7 +14,7 @@ function whileFactorial(number) {
     let total = 1;
     do {
         total = total * number;
-        number --;
+        number--;
     } while (number > 1)
     return total;
 }
