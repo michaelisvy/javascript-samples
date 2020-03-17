@@ -28,6 +28,7 @@
     "webpack-visualizer-plugin": "^0.1.11"
   },
   "dependencies": {
+    "assert": "^2.0.0",
     "axios": "^0.19.2",
     "lint": "^0.7.0",
     "lodash.clonedeep": "^4.5.0",

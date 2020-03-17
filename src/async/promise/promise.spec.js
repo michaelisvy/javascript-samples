@@ -6,8 +6,11 @@ it('should await promise', async () => {
 });
 
 it('should promise then', async () => {
-    const result = await promiseSomething("Sam");
-    expect(result).toBe("hello Sam");
+    const result = await promiseSomething("Sam").then(
+        function(result) {
+            expect(result).toBe("hello Sam")
+        }
+    );
 });
 
 function promiseSomething(name) {
