@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 describe('Axios test', () => {
-    test('should call a remote service (Get)', async () => {
+    it('should call a get service', async () => {
         const data = await getDataUsingAxios();
         expect(data.title).toBe('delectus aut autem');
         

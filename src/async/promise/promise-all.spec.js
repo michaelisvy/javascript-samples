@@ -1,19 +1,10 @@
-it('should call promise01',async()=> {
-    const promise = sayHello("Sam"); 
-    const greeting = await promise;
-    expect(greeting).toBe("hello Sam");
-});
 
-it('should call promise02',async()=> {
-    const result = await sayHello("Sam");
-    expect(result).toBe("hello Sam");
-});
 it('should call multiple promises',async()=> {
     const daltonPromise = Promise.all([
-        sayHello("Joe"),
-        sayHello("Jack"),
-        sayHello("William"),
-        sayHello("Averell")
+        promiseSomething("Joe"),
+        promiseSomething("Jack"),
+        promiseSomething("William"),
+        promiseSomething("Averell")
     ])
     .then(function (responses) {
         expect(responses[0]).toBe("hello Joe");
@@ -24,7 +15,7 @@ it('should call multiple promises',async()=> {
     await daltonPromise;
 });
 
-function sayHello(name) {
+function promiseSomething(name) {
     return new Promise(function(resolve, reject) {
        resolve("hello " +name);
     });
