@@ -8,8 +8,9 @@ describe('Name of the group', () => {
         const objectWithNumber = { a : { b : 1 } };
         const objectWithChar = { a : { b : '1' } };
 
-        assert.notEqual(objectWithNumber, objectWithChar);
         assert.deepEqual(objectWithNumber, objectWithChar);
+     
+        assert.notEqual(objectWithNumber, objectWithChar);
         assert.notDeepStrictEqual(objectWithNumber, objectWithChar);
 
     });
