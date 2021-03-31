@@ -8,7 +8,7 @@ In a real project, there should be a clear separation between `src` and `test`.
 
 * Run all the tests successfully (hopefully)
 ```
-npm run t
+npm run test
 ```
 * Run all the tests with coverage report inside the `target` folder
 ```
